@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>크리스마스 할 일 목록</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="christmas-gif-bg"></div>
+
+    <div class="container">
+      <!-- 날짜와 시간을 표시하는 컨테이너 -->
+      <div id="datetime-container">
+        <div id="date-box">
+          <p id="date"></p>
+          <p id="time"></p>
+        </div>
+      </div>
+
+      <!-- 할 일 목록 애플리케이션 -->
+      <div id="todo-app">
+        <h1>내 할 일 목록</h1>
+        <div id="todo-input-container">
+          <input type="text" id="todo-input" placeholder="할 일 추가..." />
+          <button id="add-button">추가</button>
+        </div>
+        <ul id="todo-list">
+          <!-- 할 일 항목들이 여기에 들어갑니다 -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- 할 일 목록과 관련된 자바스크립트 파일 -->
+    <!-- <script src="script.js"></script> -->
+    <!-- 현재 날짜와 시간을 업데이트하는 자바스크립트 파일 -->
+    <!-- <script src="datetime.js"></script> -->
+  </body>
+</html>

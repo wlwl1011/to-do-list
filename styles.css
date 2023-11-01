@@ -1,0 +1,190 @@
+/* 기본 리셋 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Arial", sans-serif;
+}
+
+/* 전체 컨테이너 스타일링 */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+/* 크리스마스 배경 이미지 스타일링 */
+#christmas-gif-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("christmas.gif") no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* 공부 명언 컨테이너 스타일링 */
+#quote-container {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  z-index: 1000;
+}
+
+#quote-box {
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000;
+  text-shadow: 2px 2px 4px #000000;
+  display: inline-block;
+}
+
+#quote {
+  margin: 0;
+  display: block;
+}
+
+#author {
+  font-size: 0.75em;
+  margin-top: 10px;
+  display: block;
+}
+
+/* 할 일 목록 앱 스타일링 */
+#todo-app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 할 일 목록 스타일 */
+#todo-list {
+  list-style: none;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#todo-list li {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#todo-list li.done span {
+  text-decoration: line-through;
+  color: #a9a9a9;
+}
+
+/* 입력 필드와 추가 버튼 컨테이너 */
+#todo-input-container {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todo-input {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#add-button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5cb85c;
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#add-button:hover {
+  background-color: #4cae4c;
+  transform: scale(1.05);
+}
+
+/* 삭제 버튼 스타일 */
+.delete-button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d9534f;
+  color: white;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.delete-button:hover {
+  background-color: #c9302c;
+}
+
+#datetime-container {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  z-index: 1000;
+}
+
+#date-box {
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000;
+  text-shadow: 2px 2px 4px #000000;
+  display: inline-block;
+}
+
+#date, #time {
+  margin: 0;
+  display: block;
+}
+
+#time {
+  font-size: 1.25em;
+  margin-top: 10px;
+}
