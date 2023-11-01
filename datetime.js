@@ -4,7 +4,8 @@ function updateDateTime() {
   const dateStr = now.toLocaleDateString("ko-KR", {
     year: "numeric",
     month: "long",
-    day: "numeric",
+
+    
   });
   const timeStr = now.toLocaleTimeString("ko-KR", {
     hour: "2-digit",
