@@ -3,37 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>크리스마스 할 일 목록</title>
+    <title>할 일 목록</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="christmas-gif-bg"></div>
-
-    <div class="container">
-      <!-- 날짜와 시간을 표시하는 컨테이너 -->
-      <div id="datetime-container">
-        <div id="date-box">
-          <p id="date"></p>
-          <p id="time"></p>
-        </div>
+    <div id="app">
+      <h1>할 일 목록</h1>
+      <div id="todo-form">
+        <input type="text" id="todo-input" placeholder="할 일을 입력하세요" />
+        <input type="datetime-local" id="todo-time" />
+        <select id="category-select">
+          <option value="personal">개인</option>
+          <option value="work">공부</option>
+          <option value="other">기타</option>
+        </select>
+        <button id="add-btn" onclick="addTodo()">추가</button>
       </div>
-
-      <!-- 할 일 목록 애플리케이션 -->
-      <div id="todo-app">
-        <h1>내 할 일 목록</h1>
-        <div id="todo-input-container">
-          <input type="text" id="todo-input" placeholder="할 일 추가..." />
-          <button id="add-button">추가</button>
+      <div id="categories-container">
+        <!-- 개인, 업무, 기타 할 일 및 완료 목록 -->
+        <div class="category" data-category="personal">
+          <h2>개인</h2>
+          <div class="todo-list-header">할 일</div>
+          <div
+            class="todo-list"
+            id="personal-todos"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div class="done-list-header">완료한 일</div>
+          <div
+            class="done-list"
+            id="personal-dones"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
         </div>
-        <ul id="todo-list">
-          <!-- 할 일 항목들이 여기에 들어갑니다 -->
-        </ul>
+        <div class="category" data-category="work">
+          <h2>공부</h2>
+          <div class="todo-list-header">할 일</div>
+          <div
+            class="todo-list"
+            id="work-todos"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div class="done-list-header">완료한 일</div>
+          <div
+            class="done-list"
+            id="work-dones"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+        </div>
+        <div class="category" data-category="other">
+          <h2>기타</h2>
+          <div class="todo-list-header">할 일</div>
+          <div
+            class="todo-list"
+            id="other-todos"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+          <div class="done-list-header">완료한 일</div>
+          <div
+            class="done-list"
+            id="other-dones"
+            ondrop="drop(event)"
+            ondragover="allowDrop(event)"
+          ></div>
+        </div>
       </div>
     </div>
-
-    <!-- 할 일 목록과 관련된 자바스크립트 파일 -->
-    <!-- <script src="script.js"></script> -->
-    <!-- 현재 날짜와 시간을 업데이트하는 자바스크립트 파일 -->
-    <!-- <script src="datetime.js"></script> -->
+    <script src="script.js"></script>
   </body>
 </html>
